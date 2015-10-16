@@ -5,6 +5,10 @@ body:after {
   display: none;
 }
 
+body {
+  margin: 0;
+}
+
 * {
   font-family: "Open Sans", sans-serif;
 }
@@ -14,11 +18,12 @@ body:after {
 }
 
 .sidebar {
-  background-color: lightgrey;
+  background-color: teal;
+  position: fixed;
   float: right;
   top: 0;
   right: 0;
-  width: 20%;
+  width: 22%;
   height: 100%;
 }
 
@@ -27,8 +32,13 @@ body:after {
 }
 
 .sidebar-intro img {
+  padding: 2em;
   display: block;
   margin: auto;
+}
+
+.sidebar-intro p {
+  padding: 1em;
 }
 
 .menu ul {
@@ -40,32 +50,45 @@ body:after {
   padding: 1em;
   list-style-type: none;
   display: block;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
   text-align: center;
+}
+
+.social-media-icons {
+  margin-top: 40%;
 }
 
 .social-media-icons li {
   display: inline;
   list-style-type: none;
   padding: 1em;
+  margin-top: 100px;
 }
 
 .current {
   background-color: white;
-  color: pink;
+  text-decoration: none;
+}
+
+.current a {
+  text-decoration: none;
 }
 
 .copyright {
   text-align: center;
-  font-size: .8em;
-}
-
-.header-image {
-
+  margin-top: 45%;
+  text-align: center;
+  font-size: .9em;
+  bottom: 0;
 }
 
 .main-content {
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 70%;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 58%;
+}
+
+.header-image {
+  background-color: lightpink;
+  height: 250px;
 }
