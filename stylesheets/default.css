@@ -1,3 +1,71 @@
+@import url(font-awesome.min.css);
+
+/*  Fix for font awesome */
+body:after {
+  display: none;
+}
+
 * {
   font-family: "Open Sans", sans-serif;
+}
+
+.debug {
+  border: 1px solid red;
+}
+
+.sidebar {
+  background-color: lightgrey;
+  float: right;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+}
+
+.sidebar-intro {
+  text-align: center;
+}
+
+.sidebar-intro img {
+  display: block;
+  margin: auto;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 1em;
+  list-style-type: none;
+  display: block;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.social-media-icons li {
+  display: inline;
+  list-style-type: none;
+  padding: 1em;
+}
+
+.current {
+  background-color: white;
+  color: pink;
+}
+
+.copyright {
+  text-align: center;
+  font-size: .8em;
+}
+
+.header-image {
+
+}
+
+.main-content {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 70%;
 }
