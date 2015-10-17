@@ -4,18 +4,16 @@
     <meta charset="utf-8">
     <title>Nil Thacker</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-    <style>
-      * {
-        font-family: 'Open Sans', sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
+    <link rel="stylesheet" href="stylesheets/css/font-awesome.min.css">
   </head>
   <body>
     <!-- Header (top of sidebar) -->
     <header>
       <div class="sidebar">
         <div class="sidebar-intro">
-          <img src="/imgs/nilthacker-avatar-eightbit-icon-circle.png" alt="Nil Thacker"/>
+          <img src="imgs/nilthacker-avatar-eightbit-icon-circle.png" alt="Nil Thacker"/>
           <h3>Nil Thacker</h3>
           <p><em>Web Developer. It would be ironic if everybody was made of iron.</em></p>
         </div>
@@ -25,17 +23,17 @@
           <div class="menu">
             <ul>
               <li><a href="/">About</a></li>
-              <li>Contact</li>
-              <li>Projects</li>
-              <li>Resume</li>
-              <li><a href="/blog/index.html">Blog</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Projects</a></li>
+              <li><a href="">Resume</a></li>
+              <li class="current"><a href="/blog/index.html">Blog</a></li>
             </ul>
           </div>
           <div class="social-media-icons">
-            <ul>
-              <li><a href="http://twitter.com/nilthacker">twitter</a></li>
-              <li><a href="http://instagram.com/nilthacker">instagram</a></li>
-              <li><a href="http://github.com/nilthacker">github</a></li>
+            <ul class="icons debug">
+              <li><a href="http://twitter.com/nilthacker" class="fa fa-twitter" target="_blank"></a></li>
+              <li><a href="http://instagram.com/nilthacker" class="fa fa-instagram" target="_blank"></a></li>
+              <li><a href="http://github.com/nilthacker" class="fa fa-github" target="_blank"></a></li>
             </ul>
           </div>
         </nav>
@@ -45,13 +43,12 @@
          &copy; Nil Thacker
         </div>
       </div>
-      <div class="header-image">
-        <img src="/imgs/header.png" alt="Header Image"/>
-      </div>
     </header>
 
     <!-- main content -->
-    <section>
+    <div class="header-image">
+    </div>
+    <section class="main-content">
       <h2>Blog</h2>
       <article>
         <h3>Blog Post Title</h3>
@@ -63,20 +60,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-    </footer>
-    <!--
-      - How was it to wireframe and create an HTML page with a pair?
-        We used this session to bounce ideas off of eachother rather than collaborate on the same content. We had different wireframe ideas from challenge 2.4 and decided to incorporate those ideas into our own blog template wireframes.
-
-      - Did you find wireframing to be helpful to your development process?
-        The wireframe really helped get a visual idea of where I wanted everything to go on the page.
-
-      - What did you and your pair decide made a good wireframe?
-        We decided a blog post should start with the title of the post, have a subtitle below that, followed by the date on the next line. Then the content of the blog post shoudld be below that.
-
-      - What new semantic elements did you learn about (if any) ?
-        I finished challenge 2.8 before this pairing session so I already knew which semantic elements I wanted and needed to use. All I had to do was copy my file from challenge 2.8 and add my blog template in place of the content from 2.8.
-      -->
+   <footer>
+   </footer>
   </body>
 </html>
