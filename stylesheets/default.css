@@ -49,7 +49,6 @@ body {
 }
 
 .menu li {
-  padding: 1em;
   list-style-type: none;
   display: block;
   border-top: 0px solid white;
@@ -58,11 +57,23 @@ body {
 
 .menu a {
   text-decoration: none;
+  padding: 1em;
   color: white;
+  display: block;
 }
 
 .menu a:hover {
   text-decoration: none;
+  display: block;
+  background-color: white;
+  color: black;
+}
+
+.menu .current {
+  background-color: white;
+}
+
+.menu .current a {
   color: black;
 }
 
@@ -105,6 +116,15 @@ body {
   padding-left: 10%;
   padding-right: 10%;
   width: 58%;
+}
+
+.main-content h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.main-content h3 {
+  font-size: 1.5em;
 }
 
 .header-image {
