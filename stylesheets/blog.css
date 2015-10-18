@@ -34,3 +34,7 @@ article a {
 article a:hover {
   text-decoration: underline;
 }
+
+article a:visited {
+  text-decoration: none;
+}
