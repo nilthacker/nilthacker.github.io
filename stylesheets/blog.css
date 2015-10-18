@@ -1,0 +1,36 @@
+.blog-title {
+margin: 1em 0 0 0;
+}
+
+.blog-subtitle {
+  margin: 0;
+}
+
+.blog-date {
+  margin: 0;
+}
+
+.blog-footer {
+  #border-top: 1px solid lightgrey;
+  padding-top: 1em;
+  #margin-top: 2em;
+  text-align: center;
+}
+
+.read-more {
+  font-style: italic;
+  font-size: .9em;
+}
+
+article {
+  padding-bottom: 1em;
+  border-bottom: 1px solid lightgrey;
+}
+
+article a {
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
