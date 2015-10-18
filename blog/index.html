@@ -2,20 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Nil Thacker - Blog</title>
+    <title>Nil Thacker</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-    <style>
-      * {
-        font-family: 'Open Sans', sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <link rel="stylesheet" href="../stylesheets/css/font-awesome.min.css">
   </head>
   <body>
     <!-- Header (top of sidebar) -->
     <header>
       <div class="sidebar">
         <div class="sidebar-intro">
-          <img src="/imgs/nilthacker-avatar-eightbit-icon-circle.png" alt="Nil Thacker"/>
+          <img src="../imgs/nilthacker-avatar-eightbit-icon-circle.png" alt="Nil Thacker"/>
           <h3>Nil Thacker</h3>
           <p><em>Web Developer. It would be ironic if everybody was made of iron.</em></p>
         </div>
@@ -25,17 +23,17 @@
           <div class="menu">
             <ul>
               <li><a href="/">About</a></li>
-              <li>Contact</li>
-              <li>Projects</li>
-              <li>Resume</li>
-              <li><a href="/blog/">Blog</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Projects</a></li>
+              <li><a href="">Resume</a></li>
+              <li class="current"><a href="/blog/index.html">Blog</a></li>
             </ul>
           </div>
           <div class="social-media-icons">
-            <ul>
-              <li><a href="http://twitter.com/nilthacker">twitter</a></li>
-              <li><a href="http://instagram.com/nilthacker">instagram</a></li>
-              <li><a href="http://github.com/nilthacker">github</a></li>
+            <ul class="icons debug">
+              <li><a href="http://twitter.com/nilthacker" class="fa fa-twitter" target="_blank"></a></li>
+              <li><a href="http://instagram.com/nilthacker" class="fa fa-instagram" target="_blank"></a></li>
+              <li><a href="http://github.com/nilthacker" class="fa fa-github" target="_blank"></a></li>
             </ul>
           </div>
         </nav>
@@ -45,24 +43,27 @@
          &copy; Nil Thacker
         </div>
       </div>
-      <div class="header-image">
-        <img src="/imgs/header.png" alt="Header Image"/>
-      </div>
     </header>
 
     <!-- main content -->
-    <section>
+    <div class="header-image">
+    </div>
+    <section class="main-content">
       <h2>Blog</h2>
       <article>
-        <h3><a href="/blog/git.html">A brief introduction to Git and GitHub</a></h3>
-        <h4>2 October 2015</h4>
-        <p>I discuss the benefits of version control, how git helps keep track of changes, and why you should use GitHub to store your code. <a href="/blog/git.html"><em>Read more...</em></a></p>
+        <h3 class="blog-title"><a href="/blog/git.html">A brief introduction to Git and GitHub</a></h3>
+        <h4 class="blog-subtitle">2 October 2015</h4>
+        <p>I discuss the benefits of version control, how git helps keep track of changes, and why you should use GitHub to store your code. <a href="/blog/git.html"><span class="read-more">Read more...</span></a></p>
       </article>
       <article>
-        <h3>I made a template for my blog</h3>
-        <h5>10 October 2015</h5>
-        <p>This is the template I made for my blog posts. <a href="/blog-template.html"><em>Read more...</em></a></p>
+        <h3 class="blog-title"><a href="/blog/">Another blog post title</a></h3>
+        <h4 class="blog-subtitle">2 October 2015</h4>
+        <p>A short summary of the blog post goes here. <a href="/blog/"><span class="read-more">Read more...</span></a></p>
       </article>
+
+      <div class="blog-footer">
+        <a class="blog-link-previous" href="">< previous post</a> | <a class="blog-link-next" href="">next post ></a>
+      </div>
     </section>
 
     <!-- Footer -->
