@@ -37,6 +37,7 @@ article a:hover {
 
 article a:visited {
   text-decoration: none;
+  color: blue;
 }
 
 .blog-footer a {
@@ -49,4 +50,5 @@ article a:visited {
 
 .blog-footer a:visited {
   text-decoration: none;
+  color: blue;
 }
