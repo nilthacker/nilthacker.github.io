@@ -8,6 +8,8 @@ margin: 1em 0 .25em 0;
 
 .blog-date {
   margin: 0;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 1em;
 }
 
 .blog-footer {

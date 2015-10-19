@@ -56,18 +56,17 @@
         <h5 class="blog-date">18 October 2015</h5>
 
         <h4>The CSS Box Model</h4>
-        <p>Let's start with the TL;DR:</p>
-        <ul>
-          <li>Content is archived automatically</li>
-          <li>Easily and safely revert to older (or newer) versions of code</li>
-          <li>Log who made a change, what that change was, when it was made, and why it change was made</li>
-          <li>Ability to compare changes side by side</li>
-        </ul>
-
+        <p>All HTML elements on a web page can be considered as boxes. On an un-styled web page the boxes just stack up on top of eachother in the order they're written. The "Box Model" terminology applies when talking about the design and layout of a web page.</p>
+        <p>It's basically just a box that wraps around every HTML element and consists of: margins, borders, padding, and the element content. The box model enables us to add a border around elements, and to create space between elements.</p>
         <p><img src="http://www.w3schools.com/css/box-model.gif" alt="The CSS Box Model" /><br>
-          (<a href="http://www.w3schools.com/css/css_boxmodel.asp">source</a>)</p>
-        <p>The long(er) version:</p>
-        <p>Most people don't just create something that's 100% perfect on the first try. It's usually a process of gradually adding and refining content until things slowly start falling in place where they belong. Using version control allows you to keep track of every iteration of your work, each step of the way. Think of verison control as a safety net, whether you're working on code, a book, or a magazine layout. You always have the ability to go back in time to a version of your work that's free of any bugs or typos. If you're working with multiple people on a project, version control allows everybody to see what each team member contributed to the project, and, when Kreiger eventually ends up breaking everything, you can go back to the working version before trying to figure out what went wrong.</p>
+        <span class="image-caption">Illustration of the Box Model (<a href="http://www.w3schools.com/css/css_boxmodel.asp">source</a>)</span></p>
+        <p>Under the Box Model, every HTML element contains the following (working from outside in):</p>
+        <ul>
+          <li>margin: a transparent area pushing out from all four sides of the border</li>
+          <li>border: a border that wraps around the padding and content on all four sides</li>
+          <li>padding: a transparent area pushing in from all four sides of the border</li>
+          <li>content: text or images within an element</li>
+        </ul>
       </article>
 
       <div class="blog-footer">
