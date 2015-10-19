@@ -55,18 +55,40 @@
         <h4 class="blog-subtitle">Whitespace is good</h4>
         <h5 class="blog-date">18 October 2015</h5>
 
+        <h4>TL;DR</h4>
+        <p>Margins separate elements from each other and away from page edges, adding space around the outside of elements. Padding adds space inside of an element, separating the element’s content from the edges of the targeted element. Borders are between the margin and padding.</p>
+
         <h4>The CSS Box Model</h4>
         <p>All HTML elements on a web page can be considered as boxes. On an un-styled web page the boxes just stack up on top of eachother in the order they're written. The "Box Model" terminology applies when talking about the design and layout of a web page.</p>
         <p>It's basically just a box that wraps around every HTML element and consists of: margins, borders, padding, and the element content. The box model enables us to add a border around elements, and to create space between elements.</p>
-        <p><img src="http://www.w3schools.com/css/box-model.gif" alt="The CSS Box Model" /><br>
+        <p><img class="noborder" src="http://www.w3schools.com/css/box-model.gif" alt="The CSS Box Model" /><br>
         <span class="image-caption">Illustration of the Box Model (<a href="http://www.w3schools.com/css/css_boxmodel.asp">source</a>)</span></p>
-        <p>Under the Box Model, every HTML element contains the following (working from outside in):</p>
+        <p>Under the Box Model, every HTML element contains the following:</p>
         <ul>
-          <li>margin: a transparent area pushing out from all four sides of the border</li>
-          <li>border: a border that wraps around the padding and content on all four sides</li>
-          <li>padding: a transparent area pushing in from all four sides of the border</li>
           <li>content: text or images within an element</li>
+          <li>padding: a transparent area pushing in from all four sides of the border</li>
+          <li>border: a border that wraps around the padding and content on all four sides</li>
+          <li>margin: a transparent area pushing out from all four sides of the border</li>
         </ul>
+
+        <h4>Borders</h4>
+        <p>The easiest component of the box model to understand is the border, because it can be so visually striking. Most elements do not have borders by default, but they&#8217;re easy enough to add with these CSS properties:</p>
+        <ul>
+          <li>
+          <code>border-width</code>: A length, such as <code>3px</code> or <code>0.2em</code>. Most web designers specify their borders in pixels.</li>
+          <li><code>border-color</code>: A color, such as <code>green</code> or <code>#ff0000</code>. The default color is usually black</li>
+          <li><code>border-style</code>: A keyword that indicates how to draw the border&#8217;s lines. The basic style is <code>solid</code>, but there are fancier options available, such as <code>dashed</code>, <code>dotted</code>, <code>double</code>, <code>groove</code>, <code>inset</code>, <code>outset</code>, and <code>ridge</code>. There is also a <code>none</code> option that suppresses borders. If a browsers does not support a particular &#8220;fancy&#8221; border style, it usually replaces that style with <code>solid</code>.</li>
+          <li>There is a shorthand notation named <code>border</code>. You may specify the border properties in any order. Example: <code>border: 2px dashed green</code></li>
+        </ul>
+        <p>You can apply borders to any visible element you like: divs, lists, and so on.</p>
+
+        <h4>Padding</h4>
+        <p>An element's padding is the element's "extra space inside the border." There are four padding properties: <code>padding-top</code>, <code>padding-bottom</code>, <code>padding-left</code>, and <code>padding-right</code>. You may set these values to <code>px</code>, <code>em</code>, percentages, or any other valid length unit.</p>
+        <p>There is also a shorthand property, <code>padding</code>. This property allows you to specify all your padding on one line. The order in shorthand is: top, right, bottom, left.</p>
+
+        <h4>Margins</h4>
+        <p>Margins are similar to padding. There are four margin properties: <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, and <code>margin-left</code>. There is also a shorthand property, margin, which uses the same syntax as the padding property.</p>
+        <p>The key difference between margins and padding is that padding adds extra space <i>inside</i> the border, while margins add extra space <i>outside</i> the border.</p>
       </article>
 
       <div class="blog-footer">

@@ -140,3 +140,11 @@ body {
   color: grey;
   font-size: .8em;
 }
+
+code {
+  font-family: monospace;
+  font-size: 1.2em;
+  background-color: gold;
+  padding: 1px 5px;
+  word-wrap: break-word;
+}
