@@ -4,7 +4,7 @@ I learned that I should use margins to make space between 2 elements on a page a
 
 **2. What did you learn about CSS positioning?**
 
-asdf
+I learned to appreciate the `float` and `top`, `right`, `bottom`, and `left` settings.
 
 **3. What aspects of your design did you find easiest to implement? What was most difficult?**
 
@@ -12,4 +12,4 @@ Getting the link/bio side bar was a lot easer than I was expecting. The most fru
 
 **4. What did you learn about adding and formatting elements with CSS in this challenge?**
 
-asdf
+As long as each element is tagged with the proper class, it's possible to use CSS to do style it in any way. I also learned that I could have styles stack multiple times, and how to figure out which order they'll be stacked in.
