@@ -27,6 +27,14 @@ article {
   border-bottom: 1px solid lightgrey;
 }
 
+article img {
+  border: 2px dashed lightgrey;
+}
+
+article .noborder {
+  border: 0px;
+}
+
 article a {
   text-decoration: none;
 }
