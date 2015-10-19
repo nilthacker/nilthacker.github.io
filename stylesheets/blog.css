@@ -38,3 +38,15 @@ article a:hover {
 article a:visited {
   text-decoration: none;
 }
+
+.blog-footer a {
+  text-decoration: none;
+}
+
+.blog-footer a:hover {
+  text-decoration: underline;
+}
+
+.blog-footer a:visited {
+  text-decoration: none;
+}
