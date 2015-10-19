@@ -1,9 +1,9 @@
 .blog-title {
-margin: 1em 0 0 0;
+margin: 1em 0 .25em 0;
 }
 
 .blog-subtitle {
-  margin: 0;
+  margin: 0 0 .25em 0;
 }
 
 .blog-date {
@@ -51,4 +51,12 @@ article a:visited {
 .blog-footer a:visited {
   text-decoration: none;
   color: blue;
+}
+
+.fa-long-arrow-left {
+  margin-right: .75em;
+}
+
+.fa-long-arrow-right {
+  margin-left: .75em;
 }
