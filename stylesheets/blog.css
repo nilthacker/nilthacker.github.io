@@ -8,12 +8,12 @@ margin: 1em 0 .25em 0;
 
 .blog-date {
   margin: 0;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 1em;
 }
 
 .blog-footer {
-  #border-top: 1px solid lightgrey;
   padding-top: 1em;
-  #margin-top: 2em;
   text-align: center;
 }
 
