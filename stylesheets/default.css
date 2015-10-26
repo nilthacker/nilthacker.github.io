@@ -1,11 +1,9 @@
-* {
-  font-family: "Open Sans", sans-serif;
-}
-
 body {
   margin: 0;
   margin-bottom: 2em;
   height: 100%;
+  font-family: "Open Sans", sans-serif;
+
 }
 
 .debug {
@@ -147,4 +145,10 @@ code {
   background-color: gold;
   padding: 1px 5px;
   word-wrap: break-word;
+}
+
+.code {
+  font-family: monospace;
+  font-size: 1.1em;
+  border-left: 2px solid green;
 }
