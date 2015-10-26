@@ -22,9 +22,12 @@ margin: 1em 0 .25em 0;
   font-size: .9em;
 }
 
+.index-separator {
+  border-bottom: 1px solid lightgrey;
+}
+
 article {
   padding-bottom: 1em;
-  border-bottom: 1px solid lightgrey;
 }
 
 article img {
@@ -46,6 +49,10 @@ article a:hover {
 article a:visited {
   text-decoration: none;
   color: blue;
+}
+
+.blog-footer {
+  border-top: 1px solid lightgrey;
 }
 
 .blog-footer a {

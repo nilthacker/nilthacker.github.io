@@ -1,11 +1,9 @@
-* {
-  font-family: "Open Sans", sans-serif;
-}
-
 body {
   margin: 0;
   margin-bottom: 2em;
   height: 100%;
+  font-family: "Open Sans", sans-serif;
+
 }
 
 .debug {
@@ -143,8 +141,19 @@ body {
 
 code {
   font-family: monospace;
-  font-size: 1.2em;
-  background-color: gold;
+  font-size: 1.1em;
+  background-color: #f1f1f1;
   padding: 1px 5px;
   word-wrap: break-word;
+}
+
+.codeblock {
+  font-family: monospace;
+  font-size: 1.1em;
+  border: 1px solid lightgrey;
+  margin: 1em 0 1em 2em;
+  background-color: #f1f1f1;
+  padding: 1em 0em;
+  border-radius: 5px;
+  line-height: 2em;
 }
