@@ -141,14 +141,19 @@ body {
 
 code {
   font-family: monospace;
-  font-size: 1.2em;
-  background-color: gold;
+  font-size: 1.1em;
+  background-color: #f1f1f1;
   padding: 1px 5px;
   word-wrap: break-word;
 }
 
-.code {
+.codeblock {
   font-family: monospace;
   font-size: 1.1em;
-  border-left: 2px solid green;
+  border: 1px solid lightgrey;
+  margin: 1em 0 1em 2em;
+  background-color: #f1f1f1;
+  padding: 1em 0em;
+  border-radius: 5px;
+  line-height: 2em;
 }

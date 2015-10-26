@@ -52,22 +52,37 @@
     <section class="main-content">
       <article>
         <h2 class="blog-title">Arrays and Hashes in Ruby</h2>
-        <h4 class="blog-subtitle">And when to use each</h4>
+        <h4 class="blog-subtitle">And, when to use each</h4>
         <h5 class="blog-date">25 October 2015</h5>
-        <p>In suscipit ultricies elit at tincidunt. Integer aliquam dui eget lorem malesuada, in suscipit nibh convallis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sodales neque quis neque gravida ultrices. Integer efficitur scelerisque erat vitae ultricies. Fusce dignissim velit at augue mollis, a fringilla magna suscipit. Proin lobortis lacinia justo, sed lobortis felis vulputate in. Vestibulum eu iaculis elit. Cras maximus elit id tortor volutpat vehicula. Sed commodo malesuada nibh ac finibus. Donec porttitor lacus nec quam ullamcorper gravida.</p>
-        <pre class="code">
-          num1 = 8
-          num2 = 42
 
-          sum = num1 + num2
-          difference = num1 - num2
-          quotient = num1.to_f / num2.to_f
-          product = num1 * num2
-          modulus = num1 % num2
-        </pre>
-        <p>Aliquam ac lectus tincidunt, lobortis turpis et, porta odio. Maecenas ultrices erat vitae tincidunt dignissim. Fusce purus dui, maximus sed venenatis non, euismod vel quam. Nam quis pretium mi. Aliquam dictum at tortor ut mattis. Nunc venenatis eu sem vel egestas. Fusce auctor tempus ligula et finibus.</p>
-        <p>In suscipit ultricies elit at tincidunt. Integer aliquam dui eget lorem malesuada, in suscipit nibh convallis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sodales neque quis neque gravida ultrices. Integer efficitur scelerisque erat vitae ultricies. Fusce dignissim velit at augue mollis, a fringilla magna suscipit. Proin lobortis lacinia justo, sed lobortis felis vulputate in. Vestibulum eu iaculis elit. Cras maximus elit id tortor volutpat vehicula. Sed commodo malesuada nibh ac finibus. Donec porttitor lacus nec quam ullamcorper gravida.</p>
-        <p>Aliquam ac lectus tincidunt, lobortis turpis et, porta odio. Maecenas ultrices erat vitae tincidunt dignissim. Fusce purus dui, maximus sed venenatis non, euismod vel quam. Nam quis pretium mi. Aliquam dictum at tortor ut mattis. Nunc venenatis eu sem vel egestas. Fusce auctor tempus ligula et finibus.</p>
+        <h4>Arrays</h4>
+        <p>An array is an ordered list of elements of any type. An array is defined by placing a list of elements within brackets:</p>
+        <pre class="codeblock">
+  new_array = [1, "two", 3.0, "four"]</pre>
+        <p>The array above contains an integer, a float, and some strings. You can place anything in an array, including another array.</p>
+        <p>An array is what's known as an indexed list, which means that every slot in an array is numbered and can be referenced by its index. It's important to note that the first array element is at index 0. So if we wanted to get to the second element in an array, we would access index 1. To access a specific element in array, we do this:</p>
+        <pre class="codeblock">
+  new_array[2]</pre>
+        <p>Which returns the third element in the array, <code>3.0</code>.</p>
+        <p>Arrays are a very useful way of storing data that needs to be kept in order. When an element is added to an array, it is placed at the end of the list. Ruby's array class has a lot of very useful <a href="http://ruby-doc.org/core-2.2.0/Array.html">built-in functions</a> that can be used to perform many of the actions that programmers use.</p>
+
+        <h4>Hashes</h4>
+        <p>A hash is a data structure that stores elements by their associated keys, unlike an array which stores items by an ordered index. Elements in a hash are frequently referred to as key-value pairs.</p>
+        <p>Hashes are most often created using symbols as keys with any data type as a value. All key-value pairs in a hash are surrounded by curly braces <code>{ }</code> and separated by a comma.</p>
+        <p>Hashes are created by:</p>
+        <pre class="codeblock">
+  new_hash = {
+    firstname: "Bond"
+    lastname: "James Bond"
+    codename: "007"
+  }</pre>
+        <p>To access an element stored an a hash, we simply put the key in between square brackets <code>[ ]</code>, just like an array:</p>
+        <pre class="codeblock">
+  new_hash[:codename]</pre>
+      <p>Which returns the value associated with the <code>:codename</code> key, <code>007</code>.</p>
+
+        <h4>When to use an array or a hash</h4>
+        <p>Stuff about when to use</p>
       </article>
 
       <div class="blog-footer">
