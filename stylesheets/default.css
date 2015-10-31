@@ -157,3 +157,26 @@ code {
   border-radius: 5px;
   line-height: 2em;
 }
+
+.contact-icons li {
+  display: inline;
+  list-style-type: none;
+  margin-left: 1.5em;
+  text-decoration: none;
+  font-size: 3em;
+  overflow: hidden;
+  width: 100%;
+}
+
+.contact-icons li a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact-icons li a:hover {
+  color: grey;
+}
+
+.contact-icons li visited {
+  text-decoration: none;
+}
