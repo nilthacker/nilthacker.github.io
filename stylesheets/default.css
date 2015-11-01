@@ -78,7 +78,7 @@ body {
 .social-media-icons {
   width: 300px;
   position: fixed;
-  bottom: 100px;
+  bottom: 50px;
   margin-left: 55px;
 }
 
@@ -112,6 +112,7 @@ body {
 }
 
 .copyright {
+  display: none;
   text-align: center;
   width: 300px;
   position: fixed;
@@ -151,6 +152,7 @@ body {
 .image-caption {
   color: grey;
   font-size: .8em;
+  margin: 0 0 1em 2.5em;
 }
 
 code {
