@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Arrays and Hashes in Ruby - nil's dbc blog</title>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="scripts/popup.js"></script>
     <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
     <link rel="stylesheet" href="../stylesheets/css/font-awesome.min.css">
-    <script src="scripts/popup.js"></script>
   </head>
   <body>
     <!-- Header (top of sidebar) -->
@@ -59,11 +60,11 @@
 
         <h4>Arrays</h4>
         <p>An array is an ordered list of elements of any type. An array is defined by placing a list of elements within brackets:</p>
-        <pre class="codeblock">
+        <pre class="prettyprint">
   new_array = [1, "two", 3.0, "four"]</pre>
         <p>The array above contains an integer, a float, and some strings. You can place anything in an array, including another array.</p>
         <p>An array is what's known as an indexed list, which means that every slot in an array is numbered and can be referenced by its index. It's important to note that the first array element is at index 0. So if we wanted to get to the second element in an array, we would access index 1. To access a specific element in array, we do this:</p>
-        <pre class="codeblock">
+        <pre class="prettyprint">
   new_array[2]</pre>
         <p>Which returns the third element in the array, <code>3.0</code>.</p>
         <p>Arrays are a very useful way of storing data that needs to be kept in order. When an element is added to an array, it is placed at the end of the list. Ruby's array class has a lot of very useful <a href="http://ruby-doc.org/core-2.2.0/Array.html">built-in functions</a> that can be used to perform many of the actions that programmers use.</p>
@@ -72,7 +73,7 @@
         <p>A hash is a data structure that stores elements by their associated keys, unlike an array which stores items by an ordered index. Elements in a hash are frequently referred to as key-value pairs.</p>
         <p>Hashes are most often created using symbols as keys with any data type as a value. All key-value pairs in a hash are surrounded by curly braces <code>{ }</code> and separated by a comma.</p>
         <p>Hashes are created by:</p>
-        <pre class="codeblock">
+        <pre class="prettyprint linenums">
   agent_bond = {
     firstname: "Bond"
     lastname: "James Bond"
@@ -84,7 +85,7 @@
     codename: "Moneypenny"
   }</pre>
         <p>To access an element stored an a hash, we simply put the key in between square brackets <code>[ ]</code>, just like an array. If we need to retreive Bond, James Bond's codename:</p>
-        <pre class="codeblock">
+        <pre class="prettyprint">
   agent_bond[:codename]</pre>
       <p>Returns the value associated with the <code>:codename</code> key, <code>007</code>.</p>
 
@@ -97,7 +98,7 @@
       </article>
 
       <div class="blog-footer">
-        <span class="fa fa-long-arrow-left"></span>previous post: <a class="blog-link-previous" href="/blog/css-concepts.html">CSS Concepts</a>
+        <span class="fa fa-long-arrow-left"></span>previous post: <a class="blog-link-previous" href="/blog/css-concepts.html">CSS Concepts</a> | next post: <a class="blog-link-next" href="/blog/enumerable-methods.html">Post Title</a><span class="fa fa-long-arrow-right"></span>
       </div>
     </section>
 
