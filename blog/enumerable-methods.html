@@ -55,13 +55,63 @@
     <section class="main-content">
       <article>
         <h2 class="blog-title">Zipping things with Enumerable#zip</h2>
-        <h4 class="blog-subtitle">(Not <em>really</em> zipping.)</h4>
+        <h4 class="blog-subtitle"><em>like a zipper</em></h4>
         <h5 class="blog-date">&#x1f47b; 31 October 2015 &#x1f383;</h5>
-        <p>In suscipit ultricies elit at tincidunt. Integer aliquam dui eget lorem malesuada, in suscipit nibh convallis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sodales neque quis neque gravida ultrices. Integer efficitur scelerisque erat vitae ultricies. Fusce dignissim velit at augue mollis, a fringilla magna suscipit. Proin lobortis lacinia justo, sed lobortis felis vulputate in. Vestibulum eu iaculis elit. Cras maximus elit id tortor volutpat vehicula. Sed commodo malesuada nibh ac finibus. Donec porttitor lacus nec quam ullamcorper gravida.</p>
-        <p>Aliquam ac lectus tincidunt, lobortis turpis et, porta odio. Maecenas ultrices erat vitae tincidunt dignissim. Fusce purus dui, maximus sed venenatis non, euismod vel quam. Nam quis pretium mi. Aliquam dictum at tortor ut mattis. Nunc venenatis eu sem vel egestas. Fusce auctor tempus ligula et finibus.</p>
-        <p>Aliquam ac lectus tincidunt, lobortis turpis et, porta odio. Maecenas ultrices erat vitae tincidunt dignissim. Fusce purus dui, maximus sed venenatis non, euismod vel quam. Nam quis pretium mi. Aliquam dictum at tortor ut mattis. Nunc venenatis eu sem vel egestas. Fusce auctor tempus ligula et finibus.</p>
-        <p>In suscipit ultricies elit at tincidunt. Integer aliquam dui eget lorem malesuada, in suscipit nibh convallis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sodales neque quis neque gravida ultrices. Integer efficitur scelerisque erat vitae ultricies. Fusce dignissim velit at augue mollis, a fringilla magna suscipit. Proin lobortis lacinia justo, sed lobortis felis vulputate in. Vestibulum eu iaculis elit. Cras maximus elit id tortor volutpat vehicula. Sed commodo malesuada nibh ac finibus. Donec porttitor lacus nec quam ullamcorper gravida.</p>
-        <p>Aliquam ac lectus tincidunt, lobortis turpis et, porta odio. Maecenas ultrices erat vitae tincidunt dignissim. Fusce purus dui, maximus sed venenatis non, euismod vel quam. Nam quis pretium mi. Aliquam dictum at tortor ut mattis. Nunc venenatis eu sem vel egestas. Fusce auctor tempus ligula et finibus.</p>
+
+        <h4>From the Ruby docs:</h4>
+        <blockquote>
+          <p>Function syntax:</p>
+          <pre class="prettyprint linenums">
+zip(arg, ...) → an_array_of_array
+zip(arg, ...) { |arr| block } → nil</pre>
+          <p>Takes one element from enum and merges corresponding elements from each args. This generates a sequence of n-element arrays, where n is one more than the count of arguments. The length of the resulting sequence will be enum#size. If the size of any argument is less than enum#size, nil values are supplied. If a block is given, it is invoked for each output array, otherwise an array of arrays is returned.</p>
+          <p>Example 1:</p>
+          <pre class="prettyprint linenums">
+a = [ 4, 5, 6 ]
+b = [ 7, 8, 9 ]
+
+a.zip(b)               #=> [[4, 7], [5, 8], [6, 9]]
+[1,2,3].zip(a, b)      #=> [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+[1,2].zip(a,b)         #=> [[1, 4, 7], [2, 5, 8]]
+a.zip([1,2],[8])       #=> [[4, 1, 8], [5, 2, nil], [6, nil, nil]]</pre>
+        </blockquote>
+        <p>We can figure out what this means by following the order Ruby follows when executing the function call on line 4:</p>
+        <ol>
+          <li>Take the first element from array <code>b</code> and place it in a new array one element after the first element in array <code>a</code></li>
+          <li>Take the second element from array <code>b</code> and place it in a new array one element after the second element in array <code>a</code></li>
+          <li>Take the third element from array <code>b</code> and place it in a new array one element after the third element in array <code>a</code></li>
+        </ol>
+        <p>Makes sense, right? The <code>zip</code> function is doing what an actual zipper would do: put two sides together by putting an item from one side of the zipper behind an item from the other side until the zipper is closed.</p>
+        <p><img class="noborder" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Cerniera_lampo_chiude.gif" title="A zipper" /><br>
+        <span class="image-caption">A zipper (<a href="https://upload.wikimedia.org/wikipedia/commons/8/85/Cerniera_lampo_chiude.gif">source</a>)</span></p>
+        <p>The only difference with <code>zip</code> is that we can have <em>as many arrays "zipped" with the base array as we want</em>.</p>
+        <p>Example 2:</p>
+        <pre class="prettyprint linenums">
+a = [ 4, 5, 6 ]
+b = [ 7, 8, 9 ]
+c = [ 10, 11, 12 ]
+d = [ 13, 14, 15 ]
+
+a.zip(b, c, d) {|zipped_array| puts zipped_array.object_id}</pre>
+        <p>Which returns:</p>
+        <pre class="prettyprint">
+  [[4, 7, 10, 13], [5, 8, 11, 14], [6, 9, 12, 15]]</pre>
+        <p><code>zip</code> took every element in arrays <code>b</code>, <code>c</code>, and <code>d</code> and placed them in a new array behind the element with the same index in array <code>a</code>.
+        <p>We can also, as shown in the function syntax, specify a block of code for Ruby to execute after it's finished zipping together an array.</p>
+        <p>Example 3:</p>
+        <pre class="prettyprint linenums">
+a = [ 4, 5, 6 ]
+b = [ 7, 8, 9 ]
+c = [ 10, 11, 12 ]
+d = [ 13, 14, 15 ]
+
+a.zip(b, c, d) {|zipped_array| puts zipped_array.object_id}</pre>
+        <p>Which returns:</p>
+        <pre class="prettyprint">
+  70367020471620
+  70367020469820
+  70367020469620</pre>
+        <p><code>zip</code> did the same thing as shown in Example 2, but instead of returning the arrays, the code in-between the <code>{  }</code> was executed, which was to print the <code>object_id</code> of each zipped array.
       </article>
 
       <div class="blog-footer">
