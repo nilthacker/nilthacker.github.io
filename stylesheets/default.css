@@ -156,7 +156,7 @@ code {
   word-wrap: break-word;
 }
 
-.prettyprint {
+pre.prettyprint {
   font-family: monospace;
   font-size: 1.1em;
   border: 1px solid lightgrey;
