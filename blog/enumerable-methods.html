@@ -111,7 +111,7 @@ a.zip(b, c, d) {|zipped_array| puts zipped_array.object_id}</pre>
   70367020471620
   70367020469820
   70367020469620</pre>
-        <p><code>zip</code> did the same thing as shown in Example 2, but instead of returning the arrays, the code in-between the <code>{  }</code> was executed, which was to print the <code>object_id</code> of each zipped array. One way to think about it is that it's similar to <code>select</code>, except instead of transforming items from a single collection, it works on multiple collections at once.</p>
+        <p><code>zip</code> did the same thing as shown in Example 2, but instead of returning the arrays, the code in-between the <code>{  }</code> was executed, which was to print the <code>object_id</code> of each zipped array. One way to think about it is that it's similar to <code>select</code>, except instead of transforming items from a single array, it works on multiple arrays at once.</p>
         <p>I'll leave you with a more practical example that shows why <code>zip</code> is a powerful, yet simple way of combining multiple arrays in order behind an existing array.</p>
         <p>Example 4:</p>
         <pre class="prettyprint linenums">
