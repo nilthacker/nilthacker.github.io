@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Post Title - nil's dbc blog</title>
+    <title>A brief introduction to Classes in Ruby - nil's dbc blog</title>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="../scripts/popup.js"></script>
     <link rel="icon" type="image/x-icon" href="../imgs/favicon.ico"/>
@@ -65,7 +65,7 @@
     </div>
     <section class="main-content">
       <article>
-        <h2 class="blog-title">Classes in Ruby</h2>
+        <h2 class="blog-title">A brief introduction to Classes in Ruby</h2>
         <h4 class="blog-subtitle">A class for Pokemon</h4>
         <h5 class="blog-date">6 November 2015</h5>
         <p>Let's say you're trying to keep track of a lot of data (like a bunch of Pokemon in a game), it's reasonable to want to do so in the most efficient and organized way possible so you can reuse functions and not have to update that data in more than once place.</p>
@@ -74,14 +74,99 @@
         <p>For that, you'd need a slightly more complex data structure to make a Pokemon out of, you'd need a Class:</p>
         <pre class="prettyprint linenums">
   class Pokemon
-    #things every pokemon can do are here
+    #stats about the pokemon go here
+    #things the pokemon can do go here here
   end</pre>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+        <p>As explained in the <a href="arrays-hashes.html">Arrays and Hashes in Ruby</a> blog post, an <code>Array</code> has access to the <code>#each</code> function. We can make our Pokemon class have access to its own shared functions.</p>
+        <p>We can make sure that every time we create a new Pokemon its vital stats are added to and stored within the copy by defining an <code>#initialize</code> function within our Pokemon class:</p>
+        <pre class="prettyprint linenums">
+  class Pokemon
+    def initialize(name, age, health, element)
+      #store these stats
+      @name = name
+      @age = age
+      @health = health
+      @element = element
+    end
+  end</pre>
+        <p>Every time we want to make a new Pokemon, we call:</p>
+        <pre class="prettyprint">
+  charmander = Pokemon.new("Charmander", 1, 100, "fire")</pre>
+        <p>In the code above, we created a new Pokemon called charmander and stored its stats within its own instance variables. An <em>instance variable</em> is a variable that travels with a particular instance of a class where ever it goes, it's created just like a regular variable just with an @ at the beginning. You'll be able to use it the same way for every instance of Pokemon but it will have a unique value for each. It's good practice to store important instance variables as soon as the instance is created.
+        <p>We can do this for as many Pokemon we want to create:</p>
+        <pre class="prettyprint linenums">
+  squirtle = Pokemon.new("Squirtle", 1, 100, "water")
+  pikachu = Pokemon.new("Pikachu", 1, 100, "electricity")</pre>
+        <p>Now that we can store stats for each Pokemon, we need a way to make the Pokemon <em>do stuff</em>. We can do that by adding an instance function to the class:</p>
+        <pre class="prettyprint linenums">
+  class Pokemon
+    def initialize(name, age, health, element)
+      #store these stats
+      @name = name
+      @age = age
+      @health = health
+      @element = element
+    end
+
+    def attack(target)
+      #attack the target (cause its health to go down)
+    end
+
+    def defend
+      #do some sort of defense (reduces incoming damage by some amount)
+    end
+
+    def hide
+      #hide somewhere, but we lose a turn
+    end
+  end</pre>
+      <p>I just defined the <code>#attack</code>, <code>#defend</code>, and <code>#hide</code> actions that every Pokemon can do. While I didn't code in how each function would work, you get the idea. We can call <code>pikachu.attack(charmander)</code>, which would call the <code>#attack</code> function for <code>pikachu</code>, which would probably do something to <code>charmander</code>'s health (but that's outside the scope of this post).
+        <p>Now that there are things that could potentially modify the set instance variables for each Pokemon, we need functions to do that for us. If we want to update (or set) an instance variable's value, we would use a setter function. Similarly, if we want to retrieve (or get) an an instance variable's value, we would use a getter function. This brings us to Ruby's built-in getter and setter functions:</p>
+        <ol>
+          <li><code>attr_reader</code>: returns the value of a given instance variable</li>
+          <li><code>attr_writer</code>: updates the value of a given instance variable to a provided argument</li>
+          <li><code>attr_accessor</code>: works like both <code>attr_reader</code> and <code>attr_writer</code></li>
+        </ol>
+        <p>Before adding getter and setter functions to our Pokemon class, it's important to note that you should only use the <code>attr_</code> function that meets your needs. If you'll only ever want to get the value of a variable, and never update the value once it's been set, use the <code>attr_reader</code> function to prevent your data from getting corrupted.
+        <p>Now, let's finish our example by adding getters and setters for our Pokemon class:</p>
+        <pre class="prettyprint linenums">
+  class Pokemon
+    attr_reader :name, :element
+    attr_accessor: :age, :health
+
+    def initialize(name, age, health, element)
+      #store these stats
+      @name = name
+      @age = age
+      @health = health
+      @element = element
+    end
+
+    def attack(target)
+      #attack the target (cause its health to go down)
+    end
+
+    def defend
+      #do some sort of defense (reduces incoming damage by some amount)
+    end
+
+    def hide
+      #hide somewhere, but we lose a turn
+    end
+  end</pre>
+      <p>It's good practice to have your getter and setter functions right at the top. Note how we used <code>attr_reader</code> for <code>name</code> and <code>element</code> as it wouldn't make sense to rename a Pokemon or change its element, so we only allow read access to those instance variables. It makes sense to update <code>age</code> and <code>health</code>, so we used <code>attr_accessor</code> for those.</p>
+      <p>To use a getter or setter elsewhere, you would call them like this:</p>
+      <pre class="prettyprint linenums">
+  pikachu.health(90)  #pikachu got hurt!
+  charmander.age(2)   #it's charmander's birthday!
+  squirtle.element    => "water"</pre>
+
+      <h4>Recap</h4>
+      <p>Here are a couple of things to remember about classes in Ruby:</p>
+      <ol>
+        <li>Classes are useful to use when you want to give functions to your data or have multiple instances of your data</li>
+        <li>Instance functions can call other instance functions or instance variables</li>
+        <li>Only use the getter or setter function that provides minimal functionality. Don't allow an instance variable to be written when not necessary.</li>
       </article>
 
       <div class="blog-footer">
