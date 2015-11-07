@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Post Title - nil's dbc blog</title>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="../scripts/popup.js"></script>
+    <link rel="icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <link rel="stylesheet" href="../stylesheets/css/font-awesome.min.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-32457445-8', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <!-- Header (top of sidebar) -->
+    <header>
+      <div class="sidebar">
+        <div class="sidebar-intro">
+          <img src="../imgs/nilthacker-avatar-eightbit-icon-circle.png" alt="Nil Thacker"/>
+          <h3>Nil Thacker</h3>
+          <p><em>Web Developer. It would be ironic if everybody was made of iron.</em></p>
+        </div>
+
+        <!-- Navigation (middle of sidebar) -->
+        <nav>
+          <div class="menu">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../projects.html">Projects</a></li>
+              <li><a href="../resume.html">Resume</a></li>
+              <li class="current"><a href="index.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="social-media-icons">
+            <ul class="icons">
+              <li><a href="javascript:popUp('https://docs.google.com/spreadsheet/embeddedform?formkey=dGR1M2hpSlI1Q2hwZGUxcks5WnQ0bEE6MQ')" class="fa fa-envelope-o"></a></li>
+              <li><a href="https://twitter.com/nilthacker" class="fa fa-twitter" target="_blank"></a></li>
+              <li><a href="https://github.com/nilthacker" class="fa fa-github" target="_blank"></a></li>
+              <li><a href="https://www.linkedin.com/in/nilthacker" class="fa fa-linkedin" target="_blank"></a></li>
+              <li><a href="https://instagram.com/nilthacker" class="fa fa-instagram" target="_blank"></a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Copyright (bottom of sidebar) -->
+        <div class="copyright">
+         &copy; Nil Thacker
+        </div>
+      </div>
+    </header>
+
+    <!-- main content -->
+    <div class="header-image">
+    </div>
+    <section class="main-content">
+      <article>
+        <h2 class="blog-title">Classes in Ruby</h2>
+        <h4 class="blog-subtitle">A class for Pokemon</h4>
+        <h5 class="blog-date">6 November 2015</h5>
+        <p>Let's say you're trying to keep track of a lot of data (like a bunch of Pokemon in a game), it's reasonable to want to do so in the most efficient and organized way possible so you can reuse functions and not have to update that data in more than once place.</p>
+        <p>When you find that you need to run the same function on several objects without the need for several <code>if/elsif</code> statements, you should consider using a class.</p>
+        <p>I introduced hashes and arrays earlier, but what happens if you want to treat the data like a real-world object and give it actions? Or maybe you want to have thousands of versions of an object? Suppose we wanted to make a bunch of Pokemon for a game. We could just make a hash for each Pokemon and store its <code>name</code>, <code>age</code>, <code>health</code>, and <code>element</code> within the hash, but then the data would just sit there, not to mention having to add a new key/value pair to the hash every time we wanted to store more stats about a Pokemon. What if we also wanted to give each Pokemon actions like <code>#attack</code>, <code>#defend</code>, and <code>#hide</code>?</p>
+        <p>For that, you'd need a slightly more complex data structure to make a Pokemon out of, you'd need a Class:</p>
+        <pre class="prettyprint linenums">
+  class Pokemon
+    #things every pokemon can do are here
+  end</pre>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </article>
+
+      <div class="blog-footer">
+        <span class="fa fa-long-arrow-left"></span>previous post: <a class="blog-link-previous" href="enumerable-methods.html">Zipping things together with Enumerable#zip</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+   <footer>
+   </footer>
+  </body>
+</html>
