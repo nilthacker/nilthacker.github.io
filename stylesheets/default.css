@@ -215,3 +215,7 @@ li.L9 {
 .contact-icons li visited {
   text-decoration: none;
 }
+
+.lightweight {
+  font-weight: 300;
+}
