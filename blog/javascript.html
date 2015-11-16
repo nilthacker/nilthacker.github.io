@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Looping: Ruby vs JavaScript - nil's dbc blog</title>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="../scripts/popup.js"></script>
+    <link rel="icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <link rel="stylesheet" href="../stylesheets/css/font-awesome.min.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-32457445-8', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <!-- Header (top of sidebar) -->
+    <header>
+      <div class="sidebar">
+        <div class="sidebar-intro">
+          <img src="../imgs/nilthacker-avatar-eightbit-icon-circle.png" alt="Nil Thacker"/>
+          <h3>Nil Thacker</h3>
+          <p><em>Web Developer. It would be ironic if everybody was made of iron.</em></p>
+        </div>
+
+        <!-- Navigation (middle of sidebar) -->
+        <nav>
+          <div class="menu">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../projects.html">Projects</a></li>
+              <li><a href="../resume.html">Resume</a></li>
+              <li class="current"><a href="index.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="social-media-icons">
+            <ul class="icons">
+              <li><a href="javascript:popUp('https://docs.google.com/spreadsheet/embeddedform?formkey=dGR1M2hpSlI1Q2hwZGUxcks5WnQ0bEE6MQ')" class="fa fa-envelope-o"></a></li>
+              <li><a href="https://twitter.com/nilthacker" class="fa fa-twitter" target="_blank"></a></li>
+              <li><a href="https://github.com/nilthacker" class="fa fa-github" target="_blank"></a></li>
+              <li><a href="https://www.linkedin.com/in/nilthacker" class="fa fa-linkedin" target="_blank"></a></li>
+              <li><a href="https://instagram.com/nilthacker" class="fa fa-instagram" target="_blank"></a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Copyright (bottom of sidebar) -->
+        <div class="copyright">
+         &copy; Nil Thacker
+        </div>
+      </div>
+    </header>
+
+    <!-- main content -->
+    <div class="header-image">
+    </div>
+    <section class="main-content">
+      <article>
+        <h2 class="blog-title">Looping: Ruby vs JavaScript</h2>
+        <h4 class="blog-subtitle">A brief subtitle can go here</h4>
+        <h5 class="blog-date">15 November 2015</h5>
+        <p>Before we get into Ruby or JavaScript specifics, let's review loops:</p>
+        <ul>
+          <li><code>for</code>: loop through a block of code some number of times</li>
+          <li><code>for/in</code>: loops through the properties of an object (Ruby equivalent is <code>each</code>)</li>
+          <li><code>while</code>: loop through a block of code while a specified condition is true</li>
+          <li><code>do/while</code>: a variant of <code>while</code> that will execute the code block at least once</li>
+        </ul>
+        <p>Let's set up a simple loop in Ruby and JavaScript with my favourite loop:</p>
+        <p>JavaScript:</p>
+        <pre class="prettyprint linenums">
+for (i = 99; i > 0; i--) {
+  console.log(i + " bottles of beer on the wall, " + i + " bottles of beer." +
+  "Take one down and pass it around, " + (i - 1) + " bottles of beer on the wall.")
+}</pre>
+        <p>Ruby:</p>
+        <pre class="prettyprint linenums">
+99.times do |i|
+  puts "#{99 - i} bottles of beer on the wall, #{99 - i} bottles of beer.
+  You take one down and pass it around, #{99 - i - 1} bottles of beer on the wall."
+end</pre>
+        <p>Ignoring the weird way the Ruby version is counting down and the formatting to make it fit within the box, both do the same thing but look very different. Let's take a look at the 3 parameters each loop has:</p>
+        <ul>
+          <li>a counter variable: the variable we're iterating on</li>
+          <li>a condition: the condition up (or down) to which you want to iterate</li>
+          <li>an iterator: what we do after each iteration</li>
+        </ul>
+        <p>JavaScript has each parameter explicitly defined while with Ruby it's more implicit. (Just to throw a wrench in the gears: none of the parameters are actually <em>required</em>, though. But that's for a much later time.)</p>
+        <p>JavaScript:</p>
+        <ul>
+          <li>a counter variable: <code>i</code>, with a starting value of 99</li>
+          <li>a condition: <code>i > 0</code>, keep going as long as <code>i</code> is greater than 0</li>
+          <li>an iterator: <code>i--</code>: subtract 1 from <code>i</code> after each iteration</li>
+        </ul>
+        <p>Ruby:</p>
+        <ul>
+          <li>a counter variable and condition: Both of these are combined in <code>99.times</code>. Our counter variable starts at 1 and we loop until it equals 99.</li>
+          <li>an iterator: At the end of each iteration, 1 is added to the counter variable.</li>
+        </ul>
+        <p>This is a common occurrence in Ruby, making it much easier to learn compared to other programming languages. It's easy to read the first line of the Ruby example and think "alright, we're doing this 99 times." And the same is true for many other things in Ruby, including the <code>each</code> function referenced above:</p>
+        <pre class="prettyprint linenums">
+[2, 3, 5, 7, 11, 13, 17, 19, 23].each do
+  // gee, I wonder what's going on here...
+end</pre>
+        <p>The takeaway here is this: when you're first learning a programming language, it's important to focus more on the concepts and less on syntax. Ruby is much cleaner and more like normal language than JavaScript. When writing code you're less likely to have problems with a missing closing bracket, parenthesis, or semicolon and it's much more likely that your code has a fundamental mistake. (I'm not sure which one is "better," though.)</p>
+      </article>
+
+      <div class="blog-footer">
+        <span class="fa fa-long-arrow-left"></span>previous post: <a class="blog-link-previous" href="ruby-classes.html">A brief introduction to classes in Ruby</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+   <footer>
+   </footer>
+  </body>
+</html>
