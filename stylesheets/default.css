@@ -233,6 +233,10 @@ li.L9 {
   font-weight: 300;
 }
 
+.small {
+  font-size: .7em;
+}
+
 .project-link {
   font-size: .9em;
 }
