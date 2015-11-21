@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GitHub Cheat Sheet</title>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="../scripts/popup.js"></script>
+    <link rel="icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <link rel="stylesheet" href="../stylesheets/css/font-awesome.min.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-32457445-8', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <!-- Header (top of sidebar) -->
+    <header>
+      <div class="sidebar">
+        <div class="sidebar-intro">
+          <img src="../imgs/nilthacker-avatar-eightbit-icon-circle.png" alt="Nil Thacker"/>
+          <h3>Nil Thacker</h3>
+          <p><em>Web Developer. It would be ironic if everybody was made of iron.</em></p>
+        </div>
+
+        <!-- Navigation (middle of sidebar) -->
+        <nav>
+          <div class="menu">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li class="current"><a href="../projects.html">Projects</a></li>
+              <li><a href="../resume.html">Resume</a></li>
+              <li><a href="../blog/index.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="social-media-icons">
+            <ul class="icons">
+              <li><a href="javascript:popUp('https://docs.google.com/spreadsheet/embeddedform?formkey=dGR1M2hpSlI1Q2hwZGUxcks5WnQ0bEE6MQ')" class="fa fa-envelope-o"></a></li>
+              <li><a href="https://twitter.com/nilthacker" class="fa fa-twitter" target="_blank"></a></li>
+              <li><a href="https://github.com/nilthacker" class="fa fa-github" target="_blank"></a></li>
+              <li><a href="https://www.linkedin.com/in/nilthacker" class="fa fa-linkedin" target="_blank"></a></li>
+              <li><a href="https://instagram.com/nilthacker" class="fa fa-instagram" target="_blank"></a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Copyright (bottom of sidebar) -->
+        <div class="copyright">
+         &copy; Nil Thacker
+        </div>
+      </div>
+    </header>
+
+    <!-- main content -->
+    <div class="header-image">
+    </div>
+    <section class="main-content">
+      <h2>GitHub Cheat Sheet</h2>
+      <article>
+        <p>Below is a handy cheet sheet I created to use whenever I need to commit and push local changes to GitHub.</p>
+git pull
+git checkout -b branch_name
+<do work>
+git add .
+git commit -m “Commit message”
+git checkout master
+git pull origin master
+git checkout branch_name
+git merge master
+git push origin branch_name
+*create pull request on github*
+*merge pull request on github*
+*delete branch on github*
+git checkout master
+git pull
+git branch -d branch_name
+      </article>
+    </section>
+
+    <!-- Footer -->
+   <footer>
+   </footer>
+  </body>
+</html>
