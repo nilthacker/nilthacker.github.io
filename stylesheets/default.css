@@ -202,33 +202,6 @@ li.L9 {
   background-color: #e9e9e9;
 }
 
-.contact-icons {
-  margin-top: 5em;
-}
-
-.contact-icons li {
-  display: inline;
-  list-style-type: none;
-  margin-left: 2.5em;
-  text-decoration: none;
-  font-size: 3em;
-  overflow: hidden;
-  width: 100%;
-}
-
-.contact-icons li a {
-  text-decoration: none;
-  color: black;
-}
-
-.contact-icons li a:hover {
-  color: grey;
-}
-
-.contact-icons li visited {
-  text-decoration: none;
-}
-
 .lightweight {
   font-weight: 300;
 }
@@ -239,4 +212,55 @@ li.L9 {
 
 .project-link {
   font-size: .9em;
+}
+
+.index-sidebar {
+  background-color: teal;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  min-height: 500px;
+  height: 650px;
+  color: white;
+  border-radius: 10px;
+}
+
+.index-social-media-icons {
+  width: 300px;
+  position: fixed;
+  bottom: 190px;
+  margin-left: 55px;
+}
+
+.index-social-media-icons ul {
+  padding: 0;
+  margin: 0;
+}
+
+.index-social-media-icons li {
+  padding: 0;
+  display: block;
+  float: left;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 1.25em;
+  width: 40px;
+  text-align: center;
+}
+
+.index-social-media-icons li a {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+.index-social-media-icons li a:hover {
+  color: white;
+}
+
+.index-social-media-icons li visited {
+  text-decoration: none;
 }
